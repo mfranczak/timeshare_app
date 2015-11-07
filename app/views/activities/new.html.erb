@@ -1,0 +1,7 @@
+<h1>Activities#new</h1>
+<%= simple_form_for(@activity) do |f| %>
+    <%= f.select :what, @activity_types %>
+    <%= f.input :when %>
+    <%= f.input :length %>
+    <%= f.submit %>
+<% end %>

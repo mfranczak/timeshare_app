@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :activities, except: [:edit, :update]
   resources :users
 
   get :login, to: 'sessions#new'
