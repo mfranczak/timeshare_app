@@ -8,6 +8,14 @@
 </head>
 <body>
 
+<div>
+  <% if current_user %>
+  <p>Hello, <%= current_user.email %> <a href="<%= logout_path %>">log out</a></p>
+  <% else %>
+  <p>No User, <a href="<%= login_path %>">login</a></p>
+  <% end %>
+</div>
+
 <%= yield %>
 
 </body>
