@@ -1,0 +1,11 @@
+<div class="activity-progress">
+<% activity.each do |key, amount| %>
+<%   width = amount.to_f * 100 / 96 %>
+  <span data-toggle="tooltip"
+        data-title ="<%= key %>: <%= amount %>"
+        class="activity-bar progress-<%= key %>"
+        style="width: <%= width %>%;"
+  ></span>
+<% end %>
+  <div style="clear: both"></div>
+</div>

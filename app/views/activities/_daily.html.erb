@@ -1,6 +1,15 @@
-<h2><%= day %></h2>
-<ul>
-<% activity.groups.each do |key, amount| %>
-    <li><%= key %>: <%= amount %></li>
-<% end %>
-</ul>
+
+<!--<ul>-->
+<!--<% activity.groups.each do |key, amount| %>-->
+    <!--<li><%= key %>: <%= amount %></li>-->
+<!--<% end %>-->
+<!--</ul>-->
+
+<div class="row">
+  <div class="col-xs-2">
+    <p><%= day %></p>
+  </div>
+  <div class="col-xs-8">
+    <%= render partial: 'stacked_bars', locals: {activity: activity.groups} %>
+  </div>
+</div>

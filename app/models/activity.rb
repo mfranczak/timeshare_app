@@ -6,7 +6,8 @@ class Activity < ActiveRecord::Base
       :travel,
       :shopping,
       :relax,
-      :learning
+      :learning,
+      :sport
   ]
 
   belongs_to :user

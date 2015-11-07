@@ -1,5 +1,8 @@
-<h1>Activities#index</h1>
-<p><a href="<%= new_activity_path %>">Add+</a></p>
+<h1>
+  Activities
+</h1>
+
+<p><a class="btn btn-primary" href="<%= new_activity_path %>">Add+</a></p>
 
 <% @activities.each do |day, activity| %>
     <%= render partial: 'daily', locals: {day: day, activity: activity} %>

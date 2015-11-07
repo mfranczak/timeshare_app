@@ -1,8 +1,9 @@
-<h1>Sessions#create</h1>
-
+<h1>Log in</h1>
 
 <%= simple_form_for :login, { url: login_path } do |f| %>
-    <%= f.input :email %>
-    <%= f.input :password %>
-    <%= f.button :submit %>
+    <div class="form-group">
+        <%= f.input :email %>
+        <%= f.input :password %>
+        <%= f.button :submit, 'Login' %>
+    </div>
 <% end %>
