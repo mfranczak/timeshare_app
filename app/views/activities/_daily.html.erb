@@ -1,0 +1,6 @@
+<h2><%= day %></h2>
+<ul>
+<% activity.groups.each do |key, amount| %>
+    <li><%= key %>: <%= amount %></li>
+<% end %>
+</ul>

@@ -2,7 +2,7 @@ class ActivitiesController < ApplicationController
   before_action :require_login
 
   def index
-    @activities = Activity.where({ user: current_user }).order(when: :desc)
+    @activities = DailyActivity.build_by_activities(Activity.where({ user: current_user }).order(when: :desc))
   end
 
   def new
