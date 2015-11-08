@@ -1,7 +1,13 @@
-<h1>Activities#new</h1>
+<h1>Add a new activity</h1>
+
+<% lengths = {} %>
+<% (1..48).to_a.each { |i| lengths[i] = format_time i } %>
+
 <%= simple_form_for(@activity) do |f| %>
-    <%= f.select :what, @activity_types %>
-    <%= f.input :when %>
-    <%= f.input :length %>
-    <%= f.submit %>
+    <div class="form-group">
+        <%= f.input :when %>
+        <%= f.input :length, as: :select, :collection => lengths.sort.map {|k,v| [v,k]}, class: 'form-control' %>
+        <%= f.input :what, as: :radio_buttons, :collection => @activity_types %>
+        <%= f.submit 'Create', class: 'btn btn-primary'  %>
+    </div>
 <% end %>
