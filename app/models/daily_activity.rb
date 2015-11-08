@@ -1,4 +1,5 @@
 class DailyActivity
+  # 4 * 24h = 96
   TOP_TIME = 96
 
   attr_reader :groups, :not_assigned_time
@@ -27,5 +28,13 @@ class DailyActivity
     @groups[activity.what] = activity.length
     @not_assigned_time -= activity.length
     @groups[:unknown] = @not_assigned_time
+  end
+
+  def groups_ordered
+    @unknown = @groups[:unknown]
+    @groups.delete :unknown
+
+    @ordered = @groups.sort_by { |k,v| v }.reverse
+    @ordered.push [:unknown, @unknown]
   end
 end

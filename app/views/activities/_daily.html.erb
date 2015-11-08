@@ -10,6 +10,6 @@
     <p><%= day %></p>
   </div>
   <div class="col-xs-8">
-    <%= render partial: 'stacked_bars', locals: {activity: activity.groups} %>
+    <%= render partial: 'stacked_bars', locals: {activity: activity.groups_ordered} %>
   </div>
 </div>
