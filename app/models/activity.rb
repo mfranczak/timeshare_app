@@ -9,7 +9,8 @@ class Activity < ActiveRecord::Base
       :learning,
       :sport,
       :family,
-      :friends
+      :friends,
+      :housekeeping
   ]
 
   belongs_to :user
