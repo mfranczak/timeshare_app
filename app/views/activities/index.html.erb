@@ -1,11 +1,11 @@
 <h1>
-  Activities
+  <%= I18n.t 'activities.header' %>
 </h1>
 
-<p><a class="btn btn-primary" href="<%= new_activity_path %>">Add+</a></p>
+<p><a class="btn btn-primary" href="<%= new_activity_path %>"><%= I18n.t 'activities.btn.add' %></a></p>
 
-<h2>Daily breakdown</h2>
+<h2><%= I18n.t 'activities.daily' %></h2>
 <%= bar_chart @daily_breakdown.chart_data, stacked: true %>
 
-<h2>Weekly total</h2>
+<h2><%= I18n.t 'activities.weekly' %></h2>
 <%= pie_chart @weekly_breakdown.chart_data %>

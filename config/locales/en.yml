@@ -20,4 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  meta:
+    title: Timeshare - manage and share your time
+
+  nav:
+    app: Timeshare
+    activities: Activities
+    register: Register
+    login: Login
+    logout: Logout
+
+  activities:
+    header: Activities
+    btn:
+      add: Add
+    daily: Daily breakdown
+    weekly: Weekly
