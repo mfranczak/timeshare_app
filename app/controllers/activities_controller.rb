@@ -2,7 +2,10 @@ class ActivitiesController < ApplicationController
   before_action :require_login
 
   def index
-    @activities = DailyActivity.build_by_activities(Activity.where({ user: current_user }).order(when: :desc))
+    activities = Activity.where({ user: current_user }).order(when: :desc)
+
+    @weekly_breakdown = GroupsBreakdown.new(activities)
+    @daily_breakdown = DailyBreakdown.new(activities)
   end
 
   def new

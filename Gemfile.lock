@@ -51,6 +51,7 @@ GEM
       sass (~> 3.2)
     builder (3.2.2)
     byebug (8.0.0)
+    chartkick (1.4.1)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -178,7 +179,7 @@ DEPENDENCIES
   better_errors
   bootstrap-sass (~> 3.2.0)
   byebug
-  coffee-rails (~> 4.1.0)
+  chartkick
   jbuilder (~> 2.0)
   jquery-rails
   pg
